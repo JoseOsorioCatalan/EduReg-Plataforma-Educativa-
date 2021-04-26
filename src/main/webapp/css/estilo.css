@@ -1,0 +1,11 @@
+#div1 {
+     overflow:scroll;
+     height:300px;
+     width:700px;
+     
+}
+#div1 table {
+    width:800px;
+    background-color:lightgray;
+}
+

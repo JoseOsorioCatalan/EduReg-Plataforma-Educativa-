@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    color: #666;
+    background: #f2f2f2; 
+    font-size: 1em;
+    line-height: 1.5em;
+} 
+
+h1 {
+    font-size: 2.3em;
+    line-height: 1.9em;
+    margin: 15px 0px;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+p {
+    margin: 0 0 1.5em 0;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    padding: 24px 3px 10px 0;
+
+}
+
+#main-header {
+    background: rgb(11, 64, 88);
+    color: white;
+    height: 80px;
+}	
+
+/*
+ * Logo
+ */
+#logo-header {
+    float: left;
+    padding: 40px 0 0 40px;
+    text-decoration: none;
+}
+
+
+#logo-header .site-name {
+    display: block;
+    font-weight: 500;
+    font-size: 1.7em;
+    color: white;
+}
+
+#logo-header .site-desc {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: #999;
+}
+
+
+/*
+ * Navegación
+ */
+nav {
+    float: right;
+
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 20px;
+}
+
+
+
+
+#etiquetas_a{
+    color:#666;
+    display: inline-block;
+    margin: 30px;
+    width: 400px;
+    height: 170px;
+    text-decoration: none;  
+}
+
+h2
+{
+    font-size: 2em;
+    line-height: 1.9em;
+    text-align: left;
+    font-weight: 300;
+    width: 400px;
+
+}
+
+
+
+#main-content {
+	background: white;
+	width: 93%;
+	max-width: 2000px ;
+        height: 2000px;
+	margin: 40px auto 2px;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+
+#main-content header,
+#main-content .content {
+    padding: 90px;
+}
+
+
+#main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+#main-footer p {
+    margin: 0;
+}
+
+#main-footer a {
+    color: white;
+}
+
+
+#main-header {
+    background: rgb(11, 64, 88);
+    color: white;
+    height: 80px;
+
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+}
+
+
+.opciones 
+{
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+    font-weight: 600;
+    color: #0b76a6;
+}
+
+
+.contenedor_opciones
+{
+    width: 450px;
+    margin-top: 60px;
+    margin: 30px;
+
+}
+
+.cal
+    {
+        position: relative;
+        bottom: 1250px;
+        margin-left: 650px; 
+    }
+
+    
+    
+ @media screen and (max-width: 1300px)
+{
+    .cal
+    {
+        position: relative;
+        display: inline-block;
+        margin-left: -650px; 
+        width: 450px;
+        top: 10px;
+        margin-left: 20px;
+         
+    }
+    
+    
+
+}
+
+
+@media screen and (max-width: 550px)
+{
+  
+
+    .contenedor_opciones{
+        width: 250px;
+    }
+
+    #etiquetas_a
+    {
+        margin:5px;
+        width: 240px;
+        height: 230px;
+        
+    }
+
+    h2
+    {
+        width: 100px;
+
+    }
+
+
+    #main-header {
+        background: rgb(11, 64, 88);
+        color: white;
+        height: 150px;
+
+        width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+        left: 0; /* Posicionamos la cabecera al lado izquierdo */
+        top: 0; /* Posicionamos la cabecera pegada arriba */
+    }
+
+    #main-content {
+        background: white;
+        width: 93%;
+        max-width: 2000px ;
+        height: 2100px;
+        margin: 40px auto 2px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+    }
+
+
+
+  
+    
+    nav
+    {
+
+        margin-right: 30px;
+    }
+
+    .btn-primary
+    {
+        /* width: 190px;
+         font-size: 13px;*/
+    }
+
+    .btn-info
+    {
+        font-size: 0.8em;
+
+    }
+    
+    .cal{
+        width: 250px;
+    }
+
+}
+
+.img-usuario
+{
+    margin: -55px;
+    padding:0;
+    margin-left: -25px;
+    margin-top: 5px;
+}
+
+ 

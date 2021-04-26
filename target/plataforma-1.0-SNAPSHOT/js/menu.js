@@ -1,0 +1,3 @@
+$(function() {
+  $(".tbl").stickyTableHeaders();
+});

@@ -1,0 +1,7 @@
+.table-hover
+{
+ height:450px;
+ overflow-y: auto;
+ overflow-x: auto;
+ width: 90%;
+}

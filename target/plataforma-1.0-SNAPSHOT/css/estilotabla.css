@@ -1,0 +1,16 @@
+table
+{
+    border-collapse:collapse;
+   text-align: center;
+    margin: auto;
+
+    
+}
+
+.res-tab
+{
+      overflow: scroll;
+      overflow-x:auto; 
+      height: 70px;
+  
+}
