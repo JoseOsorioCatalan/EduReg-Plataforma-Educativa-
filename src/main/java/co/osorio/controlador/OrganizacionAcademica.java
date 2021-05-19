@@ -1,6 +1,7 @@
 package co.osorio.controlador;
 
 import co.osorio.operaciones.OperacionesAsignacionesAsignaturas;
+import co.osorio.operaciones.OperacionesEstudiante;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,31 +18,25 @@ public class OrganizacionAcademica extends HttpServlet {
 
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
+      PrintWriter out = response.getWriter();
+        try {
 
-        PrintWriter out = response.getWriter();
-        Gson json = new Gson();
-        
-        // Obtengo el id del curso
-        String curso = request.getParameter("idCurso");
-        String Asignatura = request.getParameter("idAsignatura");
-        int docente =1;
-        OperacionesAsignacionesAsignaturas op = new OperacionesAsignacionesAsignaturas();
-        List<DataStudents> lista = op.BuscarPorCursoYAsignatura(5, 2, 2); 
-        
-        out.write( new Gson().toJson(lista) );
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+      
+            Gson json = new Gson();
 
-        
+            // Obtengo el id del curso
+            String curso = request.getParameter("idCurso");
+            String Asignatura = request.getParameter("idAsignatura");
+            int docente = 1;
+            OperacionesEstudiante  op = new OperacionesEstudiante();
+            List<DataStudents> lista = op.BuscarPorCursoYAsignatura(Integer.parseInt(Asignatura), Integer.parseInt(curso), 1,1);
+
+            out.write(new Gson().toJson(lista));
+
+        } catch (Exception e) {
+            
+                out.write(new Gson().toJson("ERROR"));
+        }
 
     }
 

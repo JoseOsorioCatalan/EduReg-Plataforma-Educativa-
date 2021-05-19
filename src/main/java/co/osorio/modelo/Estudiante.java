@@ -6,7 +6,9 @@
 package co.osorio.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -373,5 +375,25 @@ public class Estudiante implements Serializable {
     public String toString() {
         return "co.osorio.modelo.Estudiante[ codigoEstudiante=" + codigoEstudiante + " ]";
     }
-    
+
+    //devolver un arreglo de String 
+    public List<String> devuelveNota(int periodo, int asignatura) {
+        
+        System.out.println("FILTRAMOS ESTA LISTA DONDE PERIODO= " + periodo + "Y ASIGNATURA A: " + asignatura );
+        notaList.removeIf((p) -> !(p.getPeriodo().getIdPeriodo().equals(periodo)
+                && p.getAsignatura().getIdAsignatura().equals(asignatura)));
+          List <String> notas = new ArrayList<>();
+        if (!notaList.isEmpty()) {
+     
+        notas.add( String.valueOf( notaList.get(0).getIdNota()));
+        notas.add(notaList.get(0).getNota()); 
+        return notas; 
+            
+        } 
+          
+        notas.add("0");
+        notas.add("vacio");
+        return notas; 
+        
+    }
 }

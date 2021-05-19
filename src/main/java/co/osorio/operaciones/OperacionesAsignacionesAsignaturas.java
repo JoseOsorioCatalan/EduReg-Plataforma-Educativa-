@@ -6,10 +6,14 @@ import co.osorio.modelo.Asignacionesasignaturas;
 import co.osorio.modelo.Asignatura;
 import co.osorio.modelo.Curso;
 import co.osorio.modelo.Docente;
+import co.osorio.modelo.Estudiante;
+import co.osorio.modelo.Nota;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import javax.persistence.Query;
 
@@ -57,30 +61,7 @@ public class OperacionesAsignacionesAsignaturas implements AsignacionesDAO {
         return null;
     }
 
-    @Override
-    public List<DataStudents> BuscarPorCursoYAsignatura(int IdAsignatura, int IdCurso, int Codigo) {
-        
-        final String consulta = "select distinct estudiante.codigo_estudiante, estudiante.primer_nombre, "
-                + "estudiante.segundo_nombre, estudiante.primer_apellido, estudiante.segundo_apellido "
-                + "from estudiante inner join curso on estudiante.cursoAsignado = curso.id_curso inner join " 
-                + "asignacionesasignaturas on curso.id_curso = asignacionesasignaturas.curso where "
-                + "asignacionesasignaturas.curso = ? and asignacionesasignaturas.codigo_docente=? "
-                + " and asignacionesasignaturas.id_asignatura = ? ";
-
-        Query readQuery = conectando.getEm().createNativeQuery(consulta);
-         
-        readQuery.setParameter(1, IdCurso);
-        readQuery.setParameter(2, Codigo);
-        readQuery.setParameter(3, IdAsignatura); 
-        
-        List<Object[]> results = readQuery.getResultList();
-        
-        
-           
-           
-        return results.stream().map( res -> new DataStudents( (Integer) res[0] ,(String) res[1], (String) res[2],(String) res[3],(String) res[4], (String) res[5])).collect(Collectors.toList() );
-    }
-
+   
     public static void main(String[] args) throws Exception {
 
         /* 
@@ -101,16 +82,9 @@ public class OperacionesAsignacionesAsignaturas implements AsignacionesDAO {
         asig.setDocente(doc);
         asig.setFecha(new Date());
         op.registrar(asig);
-*/
-        
-        OperacionesAsignacionesAsignaturas op= new OperacionesAsignacionesAsignaturas();
-        
-       List<DataStudents> lista = op.BuscarPorCursoYAsignatura(5, 2, 2);
-        
-        for (DataStudents dataStudents : lista) {
-            System.out.println( dataStudents.getCodigo() );
-        }
-        
+         */
+      
+
     }
 
 }

@@ -3,31 +3,42 @@ package co.osorio.controlador;
 
 public class DataStudents {
     
-    private int Codigo;
+
+    private int CodigoEstudiante;
     private String PrimerNombre; 
     private String SegundoNombre;
     private String PrimerApellido; 
     private String SegundoApellido; 
+    private int idNota; 
     private String Nota; 
 
     public DataStudents() {
     }
 
-    public DataStudents(int Codigo, String PrimerNombre, String SegundoNombre, String PrimerApellido, String SegundoApellido, String Nota) {
-        this.Codigo = Codigo;
+    public DataStudents(int Codigo, String PrimerNombre, String SegundoNombre, String PrimerApellido, String SegundoApellido, String Nota, int idNota) {
+        this.CodigoEstudiante = Codigo;
         this.PrimerNombre = PrimerNombre;
         this.SegundoNombre = SegundoNombre;
         this.PrimerApellido = PrimerApellido;
         this.SegundoApellido = SegundoApellido;
         this.Nota = Nota; 
+        this.idNota = idNota;
     }
 
-    public int getCodigo() {
-        return Codigo;
+    public int getIdNota() {
+        return idNota;
     }
 
-    public void setCodigo(int Codigo) {
-        this.Codigo = Codigo;
+    public void setIdNota(int idNota) {
+        this.idNota = idNota;
+    }
+
+    public int getCodigoEstudiante() {
+        return CodigoEstudiante;
+    }
+
+    public void setCodigoEstudiante(int Codigo) {
+        this.CodigoEstudiante = Codigo;
     }
 
     public String getPrimerNombre() {
@@ -67,7 +78,7 @@ public class DataStudents {
         this.Nota = Nota;
     }        
     
-    public String GetNota()
+    public String getNota()
     {
         return Nota; 
     }

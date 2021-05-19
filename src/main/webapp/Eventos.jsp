@@ -154,7 +154,7 @@
                         $("#ModalEventos").modal();
                     },
 
-                    events: "http://localhost:8080/EduReg-Plataforma-Educativa/ServletAgregarEventos?dato=0",
+                    events: "http://localhost:8080/plataforma/ServletAgregarEventos?dato=0",
                     
 
                     eventClick: function (calEvent, jsEvent, view)

@@ -6,7 +6,7 @@ import co.osorio.modelo.Docente;
 import co.osorio.operaciones.OperacionesCurso;
 import co.osorio.operaciones.OperacionesTablaDocentes_Curso;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.PrintWriter;   
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;

@@ -1,0 +1,31 @@
+#surefire
+#Tue May 18 22:50:37 COT 2021
+testClassesDirectory=D\:\\Mis Documentos\\Documentos\\NetBeansProjects\\plataforma\\target\\test-classes
+classPathUrl.4=C\:\\Users\\Usuario\\.m2\\repository\\org\\eclipse\\persistence\\commonj.sdo\\2.1.1\\commonj.sdo-2.1.1.jar
+forkMode=once
+classPathUrl.3=C\:\\Users\\Usuario\\.m2\\repository\\org\\eclipse\\persistence\\eclipselink\\2.6.4\\eclipselink-2.6.4.jar
+classPathUrl.2=C\:\\Users\\Usuario\\.m2\\repository\\javax\\persistence\\javax.persistence-api\\2.2\\javax.persistence-api-2.2.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\Mis Documentos\\Documentos\\NetBeansProjects\\plataforma\\target\\classes
+reportsDirectory=D\:\\Mis Documentos\\Documentos\\NetBeansProjects\\plataforma\\target\\surefire-reports
+classPathUrl.0=D\:\\Mis Documentos\\Documentos\\NetBeansProjects\\plataforma\\target\\test-classes
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\Mis Documentos\\Documentos\\NetBeansProjects\\plataforma\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\Usuario\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.10\\surefire-api-2.10.jar
+surefireClassPathUrl.0=C\:\\Users\\Usuario\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.10\\surefire-junit3-2.10.jar
+runOrder=filesystem
+useSystemClassLoader=true
+excludes0=**/*$*
+isTrimStackTrace=true
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+classPathUrl.10=C\:\\Users\\Usuario\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.8.0\\gson-2.8.0.jar
+classPathUrl.9=C\:\\Users\\Usuario\\.m2\\repository\\com\\google\\protobuf\\protobuf-java\\3.11.4\\protobuf-java-3.11.4.jar
+classPathUrl.8=C\:\\Users\\Usuario\\.m2\\repository\\mysql\\mysql-connector-java\\8.0.23\\mysql-connector-java-8.0.23.jar
+classPathUrl.7=C\:\\Users\\Usuario\\.m2\\repository\\javax\\javaee-web-api\\7.0\\javaee-web-api-7.0.jar
+childDelegation=false
+classPathUrl.6=C\:\\Users\\Usuario\\.m2\\repository\\org\\glassfish\\javax.json\\1.0.4\\javax.json-1.0.4.jar
+classPathUrl.5=C\:\\Users\\Usuario\\.m2\\repository\\javax\\validation\\validation-api\\1.1.0.Final\\validation-api-1.1.0.Final.jar

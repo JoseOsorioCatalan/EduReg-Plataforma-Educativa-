@@ -4,14 +4,13 @@ import co.osorio.DAOs.DocenteDAO;
 import co.osorio.modelo.Asignacionesasignaturas;
 import co.osorio.modelo.Curso;
 import co.osorio.modelo.Docente;
-import co.osorio.modelo.DocenteDirectorGrupo; 
+import co.osorio.modelo.DocenteDirectorGrupo;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-
 
 public class OperacionesDocente implements DocenteDAO {
 
@@ -23,9 +22,9 @@ public class OperacionesDocente implements DocenteDAO {
 
     @Override
     public void registrar(Docente doc) throws Exception {
-       EntityTransaction ET = conectando.getEm().getTransaction();
+        EntityTransaction ET = conectando.getEm().getTransaction();
         try {
-           
+
             ET.begin();
             conectando.getEm().persist(doc);
             ET.commit();
@@ -34,7 +33,7 @@ public class OperacionesDocente implements DocenteDAO {
         }
 
     }
-   
+
     @Override
     public void modificar(Docente doc) throws Exception {
         try {
@@ -63,7 +62,7 @@ public class OperacionesDocente implements DocenteDAO {
         try {
             Docente docente = Buscar(Dato);
 
-            for (DocenteDirectorGrupo DocCur : docente.getDocenteDirectorGrupoList() ) {
+            for (DocenteDirectorGrupo DocCur : docente.getDocenteDirectorGrupoList()) {
 
                 DocCur.setEstado(false);
             }
@@ -94,7 +93,7 @@ public class OperacionesDocente implements DocenteDAO {
     @Override
     public List<Docente> listarTodos() throws Exception {
         String SQL = "select p from Docente p";
-        return  conectando.getEm().createQuery(SQL).getResultList();
+        return conectando.getEm().createQuery(SQL).getResultList();
     }
 
     @Override
@@ -124,7 +123,7 @@ public class OperacionesDocente implements DocenteDAO {
     }
 
     public static void main(String args[]) throws Exception {
-/*
+        /*
         OperacionesDocente operaciones = new OperacionesDocente();
         OperacionesCurso OpCur = new OperacionesCurso();
         OperacionesTablaDocentes_Curso OpeDocCur = new OperacionesTablaDocentes_Curso();
@@ -185,25 +184,19 @@ public class OperacionesDocente implements DocenteDAO {
         operaciones.modificar(d);
 
     }
-*/
+         */
+        OperacionesDocente operaciones = new OperacionesDocente();
+        Docente docente = operaciones.Buscar(1);
+        List<Curso> cursos = new ArrayList<>();
 
-
- OperacionesDocente op= new OperacionesDocente();
-  
- List <Docente> lista = op.ListarDocentesConCursos(); 
- 
- for(Docente docente: lista)
- {
-     System.out.println( docente.getPrimerNombre() );
-     
-     for (Asignacionesasignaturas AsignacionesDoc: docente.getAsignacionesasignaturasList() ) {
-         System.out.println( "Curso: " +  AsignacionesDoc.getCurso()  + " estado: " +  AsignacionesDoc.getEstado());
-         
-     }
- } 
- 
- 
- 
+        for (Asignacionesasignaturas AsignacionesDoc : docente.getAsignacionesasignaturasList()) {
+            cursos.add(AsignacionesDoc.getCurso());
+        }
+        
+        
+        for (Curso curso : cursos) {
+            System.out.println(curso.getCurso());
+        }
 
     }
 }

@@ -127,7 +127,7 @@
                             <div class="row">
                                      <div class="col-xs-6 col-sm-6 col-md-6">
 
-                                    <label >Periodo</label>
+                                    <label>Periodo</label>
                                     <select class="form-control" id="periodo">
                                         <option value="0">Seleccione un periodo</option>
                                         <option value="1"> 1 </option>
@@ -152,14 +152,14 @@
                     <form  action="" method="">
 
 
-                        <table align="center" class="table table-hover table-responsive table-bordered ">
+                        <table align="center" id="notas" class="table table-hover table-responsive table-bordered ">
                             <thead>
 
-                                <tr>
+                            <tr>
 
-                                    <td colspan="2"  style="width: 300px;" >
+                            <td colspan="4"  style="width: 300px;" >
                             <center>			  
-                                <b>DATOS</b>
+                                <b>DATOS ESTUDIANTE </b>
                             </center>			
                             </td>	
                             <td colspan="12" style="width: 500px;" >
@@ -182,26 +182,33 @@
 
                             <tr>
 
-
-                                <td rowspan="2" colspan="2"  align="center"><b>APELLIDOS Y NOMBRES </b></td>	
+                                <td  colspan="1"  align="center"><b>CODIGO</b></td>
+                                <td  colspan="3"  align="center"><b>APELLIDOS Y NOMBRES </b></td>	
+                         
                                 <td  align="center" colspan="12"><b>NOTA ABSOLUTA </b></td>
                                 
 
                             </tr>
 
 
-                            <tr colspan="3">	
-                                <td  align="center" colspan="3">
-                                    CALIFICACIÒN GENERAL
+                            <tr>
+                                <td colspan="1" ></td>
+                                <td colspan="3" align="center" ><span class="icon-user-circle"></span></td>
+                                
+                                <td align="center" colspan="1">
+                                    <b> CALIFICACIÓN GENERAL </b> 
                                     <br/>
-                                    <select>
+                                    <select id="select-principal">
                                         <option value="0">Escoja una calificacion</option>
-                                        <option>SUPERIOR</option>
-                                        <option>ALTO</option>
-                                        <option>BASICO</option>
-                                        <option>BAJO</option>
+                                        <option value="1" >SUPERIOR</option>
+                                        <option value="2" >ALTO</option>
+                                        <option value="3" >BASICO</option>
+                                        <option value="4">BAJO</option>
                                     </select>
+                                    <a id="nota-masiva"><i  class="icon-cw-circled" ></i></a>
+                                    <a href="" class="btn btn-info">Guardar<span class="icon-ok" ></span></a>
                                 </td>
+                              
 
                              </tr>
 
@@ -209,15 +216,13 @@
 
 
                             </thead>
-                            <tbody>
+                            <tbody id="cuerpo-tabla-calificaciones">
                 
-                            <td colspan ="20">     <img style="width: 320px;  height: 420px; " src="imagenes/busqueda.svg" class="card-img-top ml-5 mx-auto d-block" alt="..." > No ha seleccionado nada   </td>
-
+                            <td colspan ="21"><img style="width: 320px;  height: 523px; " src="imagenes/busqueda.svg" class="card-img-top ml-5 mx-auto d-block" alt="..." > <b>No ha seleccionado nada...  </b> </td>
 
                             </tbody>
                         </table>
 
-                        <input type="submit" value="Guardar datos" class="btn btn-success">
                     </form>    
 
                 </div>
@@ -236,7 +241,7 @@
 
         <!--Archivos de javascript --> 
         
-           <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrapJS/bootstrap.min.js"></script>
         <script src="js/jquery.min.js" ></script> 
